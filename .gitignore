@@ -1,0 +1,52 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Optional OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+
+# IDEs and Editors
+.vscode/
+.idea/
+
+# Optional coverage files
+coverage/
+
+# Optional build files
+build/
+dist/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# SASS cache
+.sass-cache/
+
+# Optional directories created by various processes
+.pnpm-debug.log*
+*.pid
+*.seed
+*.log
+
+# Optional testing files
+/.nyc_output
+/test_output/
+junit.xml
+test/
