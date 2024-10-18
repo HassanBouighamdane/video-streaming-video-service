@@ -1,19 +1,20 @@
+const express=require('express');
+const dotenv=require('dotenv');
+const connectDB=require('./src/configs/db.conf');
+const videoRoutes =require('./src/routes/videoRoutes')
 
+//
+dotenv.config();
+const app=express();
 
-// Import the express module
-const express = require('express');
+// Connecting to the database
+connectDB();
 
-// Create an instance of an Express application
-const app = express();
+//Routes
+app.use("/api/videos",videoRoutes);
 
-// Define a route that listens on the root URL ('/')
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-});
-
-
-// Start the server on port 3000
-const port = 3000;
-app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
-});
+//Creating and starting server
+const port=process.env.PORT || 8082;
+app.listen(port,()=>{
+  console.log(`Server listening on port: ${port}`)
+})

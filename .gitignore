@@ -4,7 +4,7 @@ npm-debug.log
 yarn-error.log
 package-lock.json
 yarn.lock
-
+test.js
 # Optional OS files
 .DS_Store
 Thumbs.db
