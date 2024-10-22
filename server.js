@@ -3,7 +3,7 @@ const dotenv=require('dotenv');
 const connectDB=require('./src/configs/db.conf');
 const videoRoutes =require('./src/routes/videoRoutes')
 
-//
+//use the environmenet variables
 dotenv.config();
 const app=express();
 
