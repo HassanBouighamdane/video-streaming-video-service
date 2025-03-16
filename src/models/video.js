@@ -6,11 +6,20 @@ const videoSchema=mongoose.Schema({
     frontImageUrl:String,
     videoUrl:String,
     duration:Number,
-    watchNumber:String,
+    watchNumber:{
+        type:Number,
+        default:0,
+    },
     categories:Array,
-    likes:Number,
-    dislikes:Number,
-    UserId:String,
+    likes:{
+        type:Number,
+        default:0,
+    },
+    dislikes:{
+        type:Number,
+        default:0,
+    },
+    userId:String,
 },
 {
     timestamps:true,

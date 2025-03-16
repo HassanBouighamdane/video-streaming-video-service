@@ -7,6 +7,9 @@ const videoRoutes =require('./src/routes/videoRoutes')
 dotenv.config();
 const app=express();
 
+//using body-parser json as middlware to parse the bodies to json for further use
+app.use(express.json());
+
 // Connecting to the database
 connectDB();
 

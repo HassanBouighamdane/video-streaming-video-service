@@ -13,8 +13,34 @@ const createVideo=async(videoData)=>{
     return await newVideo.save();
 }
 
+const deleteVideo=async(videoId)=>{
+    try {
+        const video=await videoModel.findByIdAndDelete(videoId);
+        if(!video){
+            throw new Error("Video Not found");
+        }
+        return video;
+    } catch (error) {
+        throw new Error(error.message)
+    }
+    
+}
+
+const updateVideo=async(videoId,videoData)=>{
+     
+    try {
+        
+    } catch (error) {
+        
+    }
+
+}
+
 module.exports= {
     getAllVideos,
     getVideoById,
+    createVideo,
+    deleteVideo,
+    updateVideo,
    
 }
